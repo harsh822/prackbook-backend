@@ -10,4 +10,5 @@ const objectiveProblem = new mongoose.Schema({
   option4: String,
   answer: String,
 });
-module.exports = mongoose.model("objectiveProblem", objectiveProblem);
+
+export default mongoose.model("objectiveProblem", objectiveProblem);

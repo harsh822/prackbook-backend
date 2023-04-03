@@ -25,6 +25,8 @@ const createStudent = async (req, res) => {
 
 const signIn = async (req, res) => {
   try {
+    console.log("Req", req);
+    console.log("Res", res);
     let student = await studentModel.findOne({ email: req.body.email });
     if (!student) return res.status(401).json({ error: "Student not found!" });
     if (!student.authenticate(req.body.password))

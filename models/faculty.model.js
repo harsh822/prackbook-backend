@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 import crypto from "crypto";
 
 const facultyModel = new mongoose.Schema({
@@ -48,4 +48,5 @@ facultyModel.methods = {
     return this.encryptPassword(password) === this.hashedPassword;
   },
 };
-module.exports = mongoose.model("facultyModel", facultyModel);
+
+export default mongoose.model("facultyModel", facultyModel);

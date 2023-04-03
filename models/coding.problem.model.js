@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const codingProblem = new mongoose.Schema({
   name: String,
@@ -15,4 +15,5 @@ const codingProblem = new mongoose.Schema({
   inputTestCases: [String],
   outputTestCases: [String],
 });
-module.exports = mongoose.model("codingProblem", codingProblem);
+
+export default mongoose.model("codingProblem", codingProblem);

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const exams = new mongoose.Schema({
   name: String,
@@ -15,4 +15,5 @@ const exams = new mongoose.Schema({
   codingCount: Number,
   completed: Boolean,
 });
-module.exports = mongoose.model("exams", exams);
+
+export default mongoose.model("exams", exams);
